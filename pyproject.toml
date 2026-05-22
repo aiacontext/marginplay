@@ -1,0 +1,50 @@
+[project]
+name = "marginplay"
+version = "0.1.0"
+description = "Multi-agent reinforcement learning simulation of Brazilian Equatorial Margin oil exploration (MADDPG + MLX)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Antonio LEITAO F.", email = "antonio@aiacontext.com" }]
+keywords = ["reinforcement-learning", "multi-agent", "maddpg", "mlx", "simulation"]
+dependencies = [
+    "mlx>=0.18",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=15.0",
+    "rich>=13.7",
+    "typer>=0.12",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+hf = [
+    "huggingface-hub>=0.25",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "RUF"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+ignore_missing_imports = true
