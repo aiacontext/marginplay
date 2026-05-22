@@ -1,5 +1,7 @@
 # Margin Play
 
+**Website:** [marginplay.app](https://www.marginplay.app/) · **Checkpoints:** [huggingface.co/aiacontext/marginplay](https://huggingface.co/aiacontext/marginplay)
+
 Multi-agent reinforcement learning simulation of oil exploration in the Brazilian Equatorial Margin. Six trained agents (operator, ANP, IBAMA, federal government, state government, community) interact in a coupled socio-economic-environmental world over monthly steps.
 
 **Stack:** Python 3.12 + [MLX](https://github.com/ml-explore/mlx) (Apple Silicon) + MADDPG.
